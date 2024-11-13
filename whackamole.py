@@ -15,6 +15,12 @@ def main():
                 if event.type == pygame.QUIT:
                     running = False
             screen.fill("light green")
+            #vertical lines
+            for i in range(10):
+                pygame.draw.line(screen, "dark green", (i*64, 0), (i*64, 512))
+            # horizontal lines
+            for i in range (8):
+                pygame.draw.line(screen, "dark green", (0, i * 64), (640, i * 64))
             pygame.display.flip()
             clock.tick(60)
     finally:
